@@ -19,13 +19,13 @@
         let clearTimeText = "";
         let replayButton, screenshotButton;
 
-        // **112ペア（224枚）の全候補**
-        let allPairs = Array.from({ length: 112 }, (_, i) => [`${i + 1}.png`, `A${i + 1}.png`]);
+        // **124ペア（248枚）の全候補**
+        let allPairs = Array.from({ length: 124 }, (_, i) => [`${i + 1}.png`, `A${i + 1}.png`]);
 
         function preload() {
             images["back"] = loadImage("cards/back.png"); // 裏面
 
-            // 112ペア分の画像を事前にロード
+            // 124ペア分の画像を事前にロード
             for (let pair of allPairs) {
                 images[pair[0]] = loadImage("cards/" + pair[0]);
                 images[pair[1]] = loadImage("cards/" + pair[1]);
