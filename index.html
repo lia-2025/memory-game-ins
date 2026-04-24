@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ヘイロー神経衰弱</title>
+    <title>神経衰弱ゲーム</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.min.js"></script>
 </head>
 <body>
@@ -19,13 +19,13 @@
         let clearTimeText = "";
         let replayButton, screenshotButton;
 
-        // **124ペア（248枚）の全候補**
-        let allPairs = Array.from({ length: 124 }, (_, i) => [`${i + 1}.png`, `A${i + 1}.png`]);
+        // **139ペア（278枚）の全候補**
+        let allPairs = Array.from({ length: 139 }, (_, i) => [`${i + 1}.png`, `A${i + 1}.png`]);
 
         function preload() {
             images["back"] = loadImage("cards/back.png"); // 裏面
 
-            // 124ペア分の画像を事前にロード
+            // 139ペア分の画像を事前にロード
             for (let pair of allPairs) {
                 images[pair[0]] = loadImage("cards/" + pair[0]);
                 images[pair[1]] = loadImage("cards/" + pair[1]);
@@ -44,7 +44,7 @@
             clearTimeText = "";
             gameOver = false;
 
-            // **112ペアから32ペアをランダム選択**
+            // **139ペアから32ペアをランダム選択**
             shuffle(allPairs, true); // 全ペアをシャッフル
             selectedPairs = allPairs.slice(0, 32); // 先頭の32ペアを使用
 
