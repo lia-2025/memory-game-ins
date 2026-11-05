@@ -19,13 +19,13 @@
         let clearTimeText = "";
         let replayButton, screenshotButton;
 
-        // **139ペア（278枚）の全候補**
-        let allPairs = Array.from({ length: 139 }, (_, i) => [`${i + 1}.png`, `A${i + 1}.png`]);
+        // **146ペア（292枚）の全候補**
+        let allPairs = Array.from({ length: 146 }, (_, i) => [`${i + 1}.png`, `A${i + 1}.png`]);
 
         function preload() {
             images["back"] = loadImage("cards/back.png"); // 裏面
 
-            // 139ペア分の画像を事前にロード
+            // 146ペア分の画像を事前にロード
             for (let pair of allPairs) {
                 images[pair[0]] = loadImage("cards/" + pair[0]);
                 images[pair[1]] = loadImage("cards/" + pair[1]);
@@ -44,7 +44,7 @@
             clearTimeText = "";
             gameOver = false;
 
-            // **139ペアから32ペアをランダム選択**
+            // **146ペアから32ペアをランダム選択**
             shuffle(allPairs, true); // 全ペアをシャッフル
             selectedPairs = allPairs.slice(0, 32); // 先頭の32ペアを使用
 
